@@ -49,6 +49,25 @@
   <button id="closeBtn">Close WebView</button>
 
  
+  <script>
+    // Communicate with Flutter
+    document.getElementById('getCityBtn').onclick = function () {
+      if (window.flutter_inappwebview) {
+        // Call the Flutter handler for fetching random city data
+        window.flutter_inappwebview.callHandler('fetchRandomCity');
+      } else {
+        alert('Flutter handler is not available.');
+      }
+    };
+
+    document.getElementById('closeBtn').onclick = function () {
+      if (window.flutter_inappwebview) {
+        // Call the Flutter handler to close the WebView
+        window.flutter_inappwebview.callHandler('closeWebView');
+      } else {
+        alert('Flutter handler is not available.');
+      }
+    };
   </script>
 </body>
 </html>
