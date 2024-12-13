@@ -54,7 +54,7 @@
     document.getElementById('getCityBtn').onclick = function () {
       if (window.flutter_inappwebview) {
         // Call the Flutter handler for fetching random city data
-        window.flutter_inappwebview.callHandler('fetchRandomCity');
+        window.flutter_inappwebview.callHandler('Flutter','fetchRandomCity');
       } else {
         alert('Flutter handler is not available.');
       }
@@ -63,7 +63,7 @@
     document.getElementById('closeBtn').onclick = function () {
       if (window.flutter_inappwebview) {
         // Call the Flutter handler to close the WebView
-        window.flutter_inappwebview.callHandler('closeWebView');
+        window.flutter_inappwebview.callHandler('Flutter','closeWebView');
       } else {
         alert('Flutter handler is not available.');
       }
