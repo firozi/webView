@@ -69,10 +69,11 @@
       }
     };
     document.addEventListener("DOMContentLoaded", function () {
+    if(window.Flutter){
+      window.Flutter.postMessage('pageLoaded');
+    }
+         
     
-         Flutter.PageStatus.postMessage('pageLoaded');
-    
-  
   });
     function updateCityData(city, temperature) {
     document.getElementById('city').innerText = 'City: ' + city;
