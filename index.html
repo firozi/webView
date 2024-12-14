@@ -68,13 +68,7 @@
         alert('Flutter handler is not available.');
       }
     };
-    document.addEventListener("DOMContentLoaded", function () {
-    if(window.Flutter){
-      window.Flutter.postMessage('pageLoaded');
-    }
-         
-    
-  });
+   
     function updateCityData(city, temperature) {
     document.getElementById('city').innerText = 'City: ' + city;
     document.getElementById('temperature').innerText = 'Temperature: ' + temperature + '°C';
