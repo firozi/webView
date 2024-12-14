@@ -68,6 +68,10 @@
         alert('Flutter handler is not available.');
       }
     };
+    function updateCityData(city, temperature) {
+    document.getElementById('city').innerText = 'City: ' + city;
+    document.getElementById('temperature').innerText = 'Temperature: ' + temperature + '°C';
+  }
   </script>
 </body>
 </html>
